@@ -140,7 +140,8 @@ def change(myContacts):
         data = contact.Contact(name, phone, email)
 
         # passing object to dictionary to update old data
-        myContacts[name] = data
+        myContacts[name] = data    
+        save(myContacts)
 
     else:
         print("Name doesn't exist in data base!")
@@ -156,6 +157,7 @@ def deletee(myContacts):
         print('Person was deleted!')
     else:
         print("Name doesn't exist in data base.")
+    save(myContacts)
 
 
 def listAll(myContacts):
